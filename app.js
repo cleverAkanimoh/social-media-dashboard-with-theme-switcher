@@ -14,12 +14,9 @@ import { overview } from "./overview.js";
 import { overviewToday } from "./overviewToday.js";
 
 const themeKey = "theme";
-let theme = "light";
+let theme = localStorage.getItem(themeKey) || "light";
 
-const themeInStorage = localStorage.getItem(themeKey) || "light";
-console.log("themeInStorage", themeInStorage);
-
-if (themeInStorage === "dark") {
+if (theme === "dark") {
   document.body.classList.add("dark-body");
 }
 

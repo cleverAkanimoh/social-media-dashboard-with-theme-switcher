@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  /* lets get our variables */
+  --body-background-color: hsl(0, 0%, 100%);
+  --header-background-color: hsl(225, 100%, 98%);
+  --text-color: hsl(228, 12%, 44%);
+  --heading-text-color: hsl(230, 17%, 14%);
+  --card-background-color: hsl(227, 47%, 96%);
+  --toggle-background-color: hsl(230, 22%, 74%);
+  --toggle-dark-background-color: linear-gradient(
+    to left,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+}
+
+@media screen and (prefers-color-scheme: dar) {
+  :root {
+    --body-background-color: hsl(230, 17%, 14%);
+    --header-background-color: hsl(232, 19%, 15%);
+    --text-color: hsl(228, 34%, 66%);
+    --heading-text-color: hsl(0, 0%, 100%);
+    --card-background-color: hsl(228, 28%, 20%);
+    --toggle-background-color: linear-gradient(
+      to left,
+      hsl(210, 78%, 56%),
+      hsl(146, 68%, 55%)
+    );
+  }
+
+  #theme-ball {
+    translate: 0 !important;
+  }
+}
+
+body {
+  background-color: var(--body-background-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease-out, color 0.3s ease;
+  font-size: 14px;
+  padding: 20px;
+}
+
+main {
+  max-width: 1100px;
+  margin-bottom: 30px;
+}
+
+.heading-wrapper {
+  padding-bottom: 20px;
+}
+.heading {
+  color: var(--heading-text-color);
+}
+
+.heading-subtitle {
+  font-weight: bold;
+}
+.theme-wrapper {
+  border-top: 1px solid var(--text-color);
+  padding: 20px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-active {
+  background: var(--toggle-dark-background-color) !important;
+}
+
+#theme-switcher {
+  background: var(--toggle-background-color);
+  width: 30px;
+  padding: 3px;
+  border-radius: 30px;
+  transition: background 0.4s ease;
+}
+
+.toggle-active #theme-ball {
+  translate: 0 !important;
+}
+
+#theme-ball {
+  display: block;
+  background-color: hsl(0, 0%, 100%);
+  padding: 6px;
+  border: 0;
+  outline: 0;
+  border-radius: 100%;
+  translate: 100%;
+  transition: translate 0.5s ease;
+}
+
+/* overview starts here */
+
+.overview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+}
+
+.social-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

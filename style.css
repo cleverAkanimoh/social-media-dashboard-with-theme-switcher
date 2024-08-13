@@ -102,6 +102,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .theme-heading {
@@ -255,6 +256,15 @@ main {
 }
 
 @media screen and (min-width: 800px) {
+  .theme-wrapper {
+    border: 0;
+  }
+
+  .heading-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
   main {
     max-width: 800px;
   }

@@ -1,50 +1,65 @@
+import {
+  FacebookIcon,
+  TwitterIcon,
+  InstagramIcon,
+  YoutubeIcon,
+} from "./icons/index.js";
+
 export const overviewToday = [
   {
     title: "Page Views",
     subtitle: 87,
     rating: 3,
-    icon: "",
+    icon: FacebookIcon(),
+    up: true,
   },
   {
     title: "Likes",
     subtitle: 52,
     rating: 2,
-    icon: "",
+    icon: FacebookIcon(),
+    up: false,
   },
   {
     title: "Likes",
     subtitle: 5462,
     rating: 2257,
-    icon: "",
+    icon: InstagramIcon(),
+    up: true,
   },
   {
     title: "Profile Views",
     subtitle: "52k",
     rating: 1375,
-    icon: "",
+    icon: InstagramIcon(),
+    up: true,
   },
   {
     title: "Retweets",
     subtitle: 117,
     rating: 303,
-    icon: "",
+    icon: TwitterIcon(),
+    up: true,
   },
   {
     title: "Likes",
     subtitle: 507,
     rating: 553,
-    icon: "",
+    icon: TwitterIcon(),
+    up: true,
   },
   {
     title: "Likes",
     subtitle: 107,
     rating: 19,
-    icon: "",
+    icon: YoutubeIcon(),
+    up: false,
   },
   {
     title: "Total Views",
     subtitle: 1407,
     rating: 12,
-    icon: "",
+    icon: YoutubeIcon(),
+    up: false,
   },
 ];

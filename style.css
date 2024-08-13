@@ -58,7 +58,8 @@ body {
 
 .dark-body .heading,
 .dark-body .subtitle,
-.dark-body .big-number {
+.dark-body .big-number,
+.dark-body .overview-today-container h2 {
   color: var(--heading-dark-text-color);
 }
 .dark-body .card,

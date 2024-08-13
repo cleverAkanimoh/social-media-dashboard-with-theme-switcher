@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Inter;
 }
 
 .attribution {
@@ -63,8 +66,17 @@ body {
   background-color: var(--card-dark-background-color);
 }
 
+/* .dark-body .card:hover,
+.dark-body .today-card:hover {
+  background-color: var(--text-dark-color);
+} */
+
 .dark-body #theme-ball {
   background-color: var(--body-dark-background-color);
+}
+
+.dark-body .theme-wrapper {
+  border-color: var(--text-color);
 }
 
 main {
@@ -85,7 +97,7 @@ main {
 }
 
 .theme-wrapper {
-  border-top: 1px solid var(--text-color);
+  border-top: 1px solid var(--toggle-background-color);
   padding: 20px 0 40px;
   display: flex;
   justify-content: space-between;
@@ -144,10 +156,10 @@ main {
   cursor: pointer;
 }
 
-.card:hover,
+/* .card:hover,
 .today-card:hover {
-  opacity: 0.8;
-}
+  background-color: var(--toggle-background-color);
+} */
 
 .card {
   position: relative;
@@ -157,32 +169,33 @@ main {
   align-items: center;
   gap: 10px;
   text-align: center;
+  border-radius: 0 0 10px 10px;
   background-color: var(--card-background-color);
-  border-top: 5px solid hsl(208, 92%, 53%);
 }
-.card:nth-of-type(2) {
-  border-color: hsl(203, 89%, 53%);
-}
-.card:nth-of-type(3) {
-  border: 0;
-}
-.card:nth-of-type(3)::after {
+
+.card::after {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
   z-index: -1;
   border-radius: 10px;
+  background: hsl(208, 92%, 53%);
+  translate: 0 -5px;
+}
+.card:nth-of-type(2)::after {
+  background: hsl(203, 89%, 53%);
+}
+.card:nth-of-type(3)::after {
   background-image: linear-gradient(
     to right,
     hsl(37, 97%, 70%),
     hsl(329, 70%, 58%)
   );
-  translate: 0 -5px;
 }
 
-.card:nth-of-type(4) {
-  border-color: hsl(348, 97%, 39%);
+.card:nth-of-type(4)::after {
+  background: hsl(348, 97%, 39%);
 }
 
 .social-wrapper {

@@ -92,6 +92,10 @@ main {
   align-items: center;
 }
 
+.theme-heading {
+  font-size: 16px;
+}
+
 .dark-body #theme-switcher {
   background: var(--toggle-dark-background-color) !important;
 }

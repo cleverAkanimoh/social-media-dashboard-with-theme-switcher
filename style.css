@@ -62,6 +62,7 @@ main {
 .heading-wrapper {
   padding-bottom: 20px;
 }
+
 .heading {
   color: var(--heading-text-color);
 }
@@ -69,6 +70,7 @@ main {
 .heading-subtitle {
   font-weight: bold;
 }
+
 .theme-wrapper {
   border-top: 1px solid var(--text-color);
   padding: 20px 0 40px;
@@ -123,7 +125,7 @@ main {
   text-align: center;
   width: 100%;
   max-width: 380px;
-  padding: 50px 20px;
+  padding: 30px;
   background-color: var(--card-background-color);
   border-radius: 10px;
   border-top: 5px solid hsl(208, 92%, 53%);
@@ -170,4 +172,12 @@ main {
   font-size: 16px;
   letter-spacing: 4px;
   text-transform: uppercase;
+}
+
+.update-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  margin-top: 30px;
 }
